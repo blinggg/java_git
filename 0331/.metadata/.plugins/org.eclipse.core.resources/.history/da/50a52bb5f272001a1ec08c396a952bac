@@ -1,0 +1,17 @@
+package ex02;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cal();
+		
+	}
+	
+	public static void Cal() {
+		Calculater c1=new Calculater(3,4);
+		System.out.println("x:"+c1.x);
+		System.out.println("y:"+c1.y);
+	}//call
+
+}

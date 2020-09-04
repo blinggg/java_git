@@ -1,0 +1,14 @@
+package ex02;
+
+//≥–¿Ã
+public class Area {
+	//ªÔ∞¢«¸≥–¿Ã:(πÿ∫Ø*≥–¿Ã*≥Ù¿Ã)*2/1
+	
+	double triangle(int x, int y) {
+		return x*y/2.;
+				
+	}
+	
+	
+	
+}

@@ -1,0 +1,30 @@
+//성적관리용 클래스
+public class Grade {
+//필드-------------------------------------------------
+	String sno;
+	String sname;
+	int kor;
+	int eng;
+	int mat;
+	int tot;
+	
+//생성자만들기--------------------------------------------
+	public Grade(String sno, String sname, int kor, int eng, int mat) {
+		super();
+		this.sno = sno;
+		this.sname = sname;
+		this.kor = kor;
+		this.eng = eng;
+		this.mat = mat;
+	}
+	
+//메소드--------------------------------------------------
+	int total(int kor, int eng, int mat) {
+		return kor+eng+mat;
+	}
+	
+ void printGrade(Grade g) {
+	 System.out.println(g.sno+"\t"+g.sname+"\t"+g.eng+"\t"+g.mat+"\t"+g.tot);
+ }
+}
+

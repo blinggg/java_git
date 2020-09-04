@@ -1,0 +1,62 @@
+package ex02;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		
+		boolean run=true;
+		int[] scores=null;				//갯수를 모를때 null 사용
+		while(run) {
+		
+			//1.타이틀 정하기>>반복문사용>>5번누르면 종료
+				System.out.println("-----------------------------------------");
+				System.out.println("1.학생수|2.점수입력|3.점수리스트|4.분석|5.종료");
+				System.out.println("-----------------------------------------");
+				
+				System.out.print("선택>");
+				int menu=s.nextInt();
+			
+			//switch조건문사용
+				switch(menu) {
+				
+				case 1 :
+					System.out.print("학생수>");
+					int count=s.nextInt();		
+					scores=new int[count];		//점수를 넣어줄 방 만들기
+					break;	
+					
+				case 2 :
+					for(int i=0; i<=scores.length-1; i++) {
+						System.out.print("점수["+i+"]>");
+						scores[i]=s.nextInt();
+					}
+					break;	
+					
+				case 3 :
+					for(int i=0; i<=scores.length-1; i++) {
+						System.out.print(scores[i]);
+						scores[i]=s.nextInt();
+					}
+					break;	
+					
+				case 4 :
+					break;
+					
+				case 5 :
+					run=false;
+					System.out.println("프로그램이 종료되었습니다.");
+					break;								//case 제일 마지막 구문은 break생략가능
+					
+				}//switch
+		
+		
+		
+		
+		
+		
+		}//while
+	}//main
+}//class

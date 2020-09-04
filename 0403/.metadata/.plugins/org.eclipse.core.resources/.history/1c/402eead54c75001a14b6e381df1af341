@@ -1,0 +1,7 @@
+package ex01;
+
+public class StudentDAO {
+	//데이터베이스를 가져올 공간(데이터베이스 오브젝트)
+	
+	
+}

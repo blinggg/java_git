@@ -1,0 +1,79 @@
+package ex04;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		boolean run=true;
+		Scanner s=new Scanner(System.in);
+		
+		//배열선언하기
+		Grade[] grade=new Grade[100];
+		int count=0; // 입력할 때마다  배열을 1씩 증가시키는 변수
+		
+		while(run) {
+			System.out.println("--------------------------------");
+			System.out.println("1.성적입력|2.성적목록|3.성적조회|4.종료");
+			System.out.println("--------------------------------");
+			System.out.println("메뉴선택>");
+			int menu=s.nextInt();
+			
+		switch(menu){
+			case 1: //입력
+				grade[count]=new Grade();
+				System.out.print("-----------------------------");
+				System.out.print("성적입력");
+				System.out.print("-----------------------------");
+				System.out.print("번호>");
+				grade[count].sno=s.next();
+				System.out.print("성명>");
+				grade[count].sname=s.next();
+				System.out.print("국어>");
+				grade[count].kor=s.nextInt();
+				System.out.print("영어>");
+				grade[count].eng=s.nextInt();
+				System.out.print("수학>");
+				grade[count].mat=s.nextInt();
+				System.out.println("결과:성적입력완료\t");
+				
+				count++;
+				
+				break;
+				
+			case 2://성적목록 보여주가 
+				for(int i=0; i<count; i++) {
+					grade[i].printGrade();
+				}
+				System.out.println();
+				break;
+				
+			case 3://성적조회
+				System.out.print("-----------------------------");
+				System.out.print("성적조회");
+				System.out.print("-----------------------------");
+				String no=s.next();
+				int find=0;
+				for(int i=0; i<count; i++) {
+					if(no.equals(grade[i].sno)){
+						grade[i].printGrade();
+						find=1;
+						}
+					
+				}
+				
+				break;
+				
+			case 4:
+				run=false;
+				System.out.println("프로그램 종료");
+				break;
+				
+				
+			
+			}//s
+		}//w
+
+	}
+
+}

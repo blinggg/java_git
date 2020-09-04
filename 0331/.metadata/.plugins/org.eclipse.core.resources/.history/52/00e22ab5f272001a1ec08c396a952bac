@@ -1,0 +1,22 @@
+package ex02;
+
+//계산기 클래스
+public class Calculater {
+	//필드
+	int x;
+	int y;
+	
+	//기본생성자
+	Calculater(){
+		
+				}//기본생성자
+
+	//일반생성자
+	Calculater(int x, int y){
+		this.x=x;
+		this.y=y;
+				}
+	
+	
+
+}//class

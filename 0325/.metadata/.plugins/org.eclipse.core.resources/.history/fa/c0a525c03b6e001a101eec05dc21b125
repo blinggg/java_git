@@ -1,0 +1,35 @@
+package ex02;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("[1]1~100까지의 합계");
+		System.out.println("[2]1~100까지의 짝수합계");
+		System.out.println("[3]1~100까지의 홀수합계");
+		System.out.println("[4]프로그램종료");
+		
+		Scanner s=new Scanner(System.in);
+		System.out.println("메뉴 선택을 하세요!");
+		int menu=s.nextInt();
+		
+		switch(menu) {
+			case 1:
+				System.out.println("\n***1~100까지의 합계");
+				break;
+			case 2:
+				System.out.println("\n***1~100까지의 짝수합계");
+				break;
+			case 3:
+				System.out.println("\n***1~100까지의 홀수합계");
+				break;
+			case 4:
+				System.out.println("\n***프로그램종료!");
+		}
+			
+	}
+
+}

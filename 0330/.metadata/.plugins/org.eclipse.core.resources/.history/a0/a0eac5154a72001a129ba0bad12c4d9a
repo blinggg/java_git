@@ -1,0 +1,92 @@
+package ex03;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) throws Exception{
+		// 계좌관리 샘플 만들기
+		
+		//데이터베이스 접속>>암기할 것.
+				String driver = "oracle.jdbc.driver.OracleDriver";
+				String url = "jdbc:oracle:thin:@localhost:1521:xe";
+				String user = "system";
+				String password = "1234";
+
+				Class.forName(driver);
+				Connection con=DriverManager.getConnection(url, user, password);
+				
+		Scanner s=new Scanner(System.in);
+		boolean run=true;
+		while(run) {
+		
+			System.out.println("---------------------------------");
+			System.out.println("1.계좌생성|2.목록|3.예금|4.출금|5.종료");
+			System.out.println("---------------------------------");
+			System.out.println("선택>");
+			
+			int menu=s.nextInt();
+			switch(menu){
+				
+				case 1://계좌생성하기
+					System.out.println("--------------------------");
+					System.out.println("계좌생성");
+					System.out.println("--------------------------");
+					System.out.println("계좌번호>");
+					String ano=s.next();
+					System.out.println("계좌주>");
+					String aname=s.next();
+					System.out.println("초기입금액>");
+					int balance=s.nextInt();
+					System.out.println("결과:계좌가 생성되었습니다.");
+					
+					//SQL실행문 만들기
+					String sql="insert into tbl_account (ano,aname,balance) values (?,?,?)";
+					
+					PreparedStatement ps=con.prepareStatement(sql);
+					
+					ps.setString(1, ano);
+					ps.setString(2, aname);
+					ps.setInt(3, balance);
+					ps.execute();
+					
+					break;
+					
+				case 2://목록
+					sql="select * from tbl_account"; //tbl_account 테이블을 조회해.
+					ps=con.prepareStatement(sql);						//실행하여 ps에 넣어주기
+					ResultSet rs=ps.executeQuery();	
+					System.out.println("--------------------------");
+					System.out.println("계좌번호\t계좌주\t잔액");
+					System.out.println("--------------------------");
+					
+					while(rs.next()) {
+						ano=rs.getString("ano");
+						aname=rs.getString("aname");
+						balance=rs.getInt("balance");
+						
+						System.out.print(ano+"\t");
+						System.out.print(aname+"\t");
+						System.out.print(balance+"\t");
+						
+					}//2-while
+					
+					break;
+					
+				case 3://예금
+					break;
+				case 4://출금
+					break;
+				case 5://종료
+					run=false;
+					System.out.println("프로그램 종료합니다.");
+					break;
+					
+			}//switch
+		}//while
+	}
+}

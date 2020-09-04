@@ -1,0 +1,28 @@
+package ex02;
+
+public class Car {
+//필드선언하기----------------------------------------------------------
+	private String company; //다른곳에서 수정불가하므로 private
+	private int maxSpeed;
+	
+//set() 메서드---------------------------------------------------------
+	public void setcompany(String company) {
+		this.company=company;
+	}
+	
+//get() 메서드---------------------------------------------------------
+	public String getCompany() {
+		return company;
+	}
+	
+//기본생성자(기본)-------------------------------------------------------
+	Car(){
+	
+	}
+	
+//메소드(실행)----------------------------------------------------------
+	void printCar() {
+		System.out.println("제조사:"+company);
+		System.out.println("최대속도:"+maxSpeed);
+	}
+}

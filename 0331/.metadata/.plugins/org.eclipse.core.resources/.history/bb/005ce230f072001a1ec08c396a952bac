@@ -1,0 +1,45 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		Student s1=new Student(); // student()>생성자
+		s1.sno="01";			// 필드
+		s1.sname="홍길동";		
+		s1.tel="010-4751-4198";
+		s1.print(s1);
+		
+		
+		
+		Student s2=new Student();
+		s2.sno="02";
+		s2.sname="심청이";
+		s2.tel="010-5555-6666";
+		s2.print(s2);
+		
+		Student s3=new Student("03","이몽룡","010-1111-7777");
+		s3.print(s3);
+		
+		Car car1=new Car(); //기본생성자
+		car1.color="검정";	//필드
+		car1.model="그렌저";	
+		car1.maxSpeed=150;
+		car1.printCar(car1);
+		
+		Car car2=new Car();
+		car2.color="핑크";
+		car2.model="소나타";
+		car2.maxSpeed=200;
+		car2.printCar(car2);
+		
+		Car car3=new Car("삼성","슈퍼","회색",300);
+		car3.printCar(car3);
+		
+		
+		
+	}//m
+}//c

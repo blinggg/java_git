@@ -1,0 +1,46 @@
+package ex02;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//연습하기
+		Scanner s=new Scanner(System.in);
+		
+		boolean run=true;
+		int[] scores=null;
+		
+		//반복문 출력
+		while(run) {
+			System.out.println("-------------------------------------");
+			System.out.println("1.배열생성|2.데이터입력|3.데이터출력|4.종료");
+			System.out.println("-------------------------------------");
+			System.out.print("선택>");
+			int menu=s.nextInt();
+		
+		//메뉴값이 출력되면?
+		switch(menu){
+			case 1:
+				System.out.print("배열크기:>");
+				int arraySize=s.nextInt();
+				scores=new int[arraySize];
+				break;
+				
+			case 2:
+				for(int i=0; i<=scores.length-1; i++) {
+					System.out.println("숫자["+i+"]");
+				}
+
+				break;
+				
+			case 3:
+				break;
+				
+			case 4:
+				break;
+					
+				}//switch
+			}//while
+		}//main
+}//class

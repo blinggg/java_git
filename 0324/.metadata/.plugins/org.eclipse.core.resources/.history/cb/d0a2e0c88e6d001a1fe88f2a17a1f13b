@@ -1,0 +1,30 @@
+package ex05;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		switch1(); //실행 할 메소드 이름을 적어준다
+			
+	}
+
+	public static void switch1() {
+		System.out.println("switch 예제1");
+		 int time=9;
+		 switch(time) {
+		 case 9:
+			 System.out.println("회의를 합니다.");
+			 break;
+		 case 8 :
+			 System.out.println("출근을 합니다.");
+			 break;
+		 case 10 :
+			 System.out.println("업무를 봅니다.");
+			 break;
+		default :
+			System.out.println("외근을 합니다.");
+		 }
+		 
+	
+	
+	}
+}

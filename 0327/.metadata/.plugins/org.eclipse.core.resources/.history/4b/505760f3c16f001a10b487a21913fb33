@@ -1,0 +1,49 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// 변수지정하기
+		int a=6;
+		int b=10;
+		
+		String name1="정은경";
+		String name2="정은경";
+		
+		
+		
+		
+		
+		//연산자.
+		//1.산술연산자(+,-,*,/,%)
+		
+		//2.비교연산자(<,>,<=,>=,==,!==)>> 데이터저장장소 비교는 == / 값 비교는 equal
+		
+		//3.논리연산자(!, && , |)
+			boolean isrun;
+			
+			isrun=(a>=5) && (b<10);
+			if(isrun) {
+				System.out.println("참");
+			}else {
+				System.out.println("거짓");
+			}
+		
+		if(name1==name2) {
+			System.out.println("같습니다");
+		}else {
+			System.out.println("같지않습니다.");
+		}
+		
+		if(a==b) {
+			System.out.println("같니?");
+		}else {
+			System.out.println("다르니?");
+		}
+		
+		
+		
+		
+
+	}//main
+}//class

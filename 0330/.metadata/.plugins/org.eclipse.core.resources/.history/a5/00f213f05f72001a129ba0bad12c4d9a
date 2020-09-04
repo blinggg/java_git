@@ -1,0 +1,67 @@
+package ex04;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) throws Exception{
+		//데이터베이스 접속>>암기할 것.
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "system";
+		String password = "1234";
+
+		Class.forName(driver);
+		Connection con=DriverManager.getConnection(url, user, password);
+		
+		Scanner s=new Scanner(System.in);
+		
+		boolean run=true;
+		while(run) {
+			System.out.println("-----------------------------------------");
+			System.out.println("1.상품등록|2.상품목록|3.상품수정|4.종료");
+			System.out.println("-----------------------------------------");
+			System.out.println("선택>");
+			int menu=s.nextInt();
+			
+		switch(menu) {
+		
+		case 1:
+			System.out.println("-----------------------------------------");
+			System.out.println("상품입력");
+			System.out.println("-----------------------------------------");
+			System.out.println("상품번호");
+			String sno=s.next();
+			System.out.println("상품이름");
+			String sname=s.next();
+			System.out.println("상품가격");
+			int sprice=s.nextInt();
+			System.out.println("상품수량");
+			int squan=s.nextInt();
+			System.out.println("결과:상품이 입력되었습니다.");
+			
+			String sql="insert into goods (sno,sname,sprice,squan) values(?,?,?,?)";
+			PreparedStatement ps=con.prepareStatement(sql);
+			
+			
+			break;
+			
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+			
+			
+		
+		}//s
+			
+			
+			
+		}//w
+	}//m
+}//c

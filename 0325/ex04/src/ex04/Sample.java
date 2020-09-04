@@ -1,0 +1,35 @@
+package ex04;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//배열(참조타입)
+		
+	/*int[] d= {80,90,100,150,200};
+		int sum=0;
+		
+		for(int i=0; i<=d.length-1; i++) { // i=인덱스값
+			System.out.println(i+"번째"+d[i]);
+			sum=sum+d[i]; // d의 i번째 값을 입력한다.
+		}
+		System.out.println("합계:"+sum);
+		
+		System.out.println("평균:"+sum/d.length);*/
+		
+		Scanner s=new Scanner(System.in);
+		int[] num=new int[5]; // num이 들어갈 공간 배열 5개 만들어 놓기
+		int sum=0;
+		
+		for(int i=0; i<=num.length-1; i++) {
+			System.out.println(i+"번째값은 무엇인가요?");
+			num[i]=s.nextInt(); //데이터 값을 입력받아서 i 값에 넣어주기
+											}
+		for(int i=0; i<=num.length-1; i++) {
+			sum=sum+num[i];
+		}
+		System.out.println("합계는요?"+sum);
+		
+	}
+}

@@ -1,0 +1,98 @@
+package ex04;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//제목 출력하기
+		Scanner s= new Scanner(System.in);
+		boolean run=true;
+		
+		String[] no=new String[100];		//계좌번호 방 100개
+		String[] name=new String[100];		//예금주 방 100개	
+		int[] balance=new int[100]; 		//계좌잔액
+		int count=0;						//계좌갯수
+		
+		while(run){
+			System.out.println("------------------------------");
+			System.out.println("1.계좌생성|2.계좌목록|3.예금|4.출금|5.종료");
+			System.out.println("------------------------------");
+			
+			System.out.print("선택>");
+			int menu=s.nextInt();
+			
+			switch(menu) {
+			case 1:
+				System.out.println("------------------------------");
+				System.out.println("계좌생성");
+				System.out.println("------------------------------");
+				
+				System.out.print("계좌번호:");
+				no[count]=s.next();
+				
+				System.out.print("계좌주:");
+				name[count]=s.next();
+				
+				System.out.print("초기입금액:");
+				balance[count]=s.nextInt();
+				
+				System.out.println("결과:계좌가 생성되었습니다.");
+				count=count+1;
+				
+				break;
+				
+			case 2: //계좌목록
+				System.out.println("------------------------------");
+				System.out.println("계좌목록");
+				System.out.println("------------------------------");
+				
+				for(int i=0; i<=count-1; i++ ) {
+					System.out.println(no[i]+"\t"+name[i]+"\t"+balance[i]+"\t");
+				}
+				System.out.println();
+				break;
+				
+			case 3: //예금
+				System.out.println("------------------------------");
+				System.out.println("입금");
+				System.out.println("------------------------------");
+				
+				System.out.print("계좌번호:");
+				String number=s.next();   		//입금할 계좌번호
+				System.out.print("입금액>");			
+				int input=s.nextInt();			//입금액
+				
+				for(int i=0; i<=count-1; i++) {
+					if(no[i].equals(number)) {
+						balance[i]=balance[i]+input;	//잔액+입금액
+					}
+				}
+				System.out.println("결과:예금이 성공되었습니다.");
+				break;
+				
+			case 4: //출금
+				System.out.println("------------------------------");
+				System.out.println("출금");
+				System.out.println("------------------------------");
+				
+				System.out.print("계좌번호:");
+				String number1=s.next();
+				System.out.print("출금액>");
+				int output=s.nextInt();
+				
+				for(int i=0; i<=count-1; i++) {
+					if(no[i].equals(number1)) {
+						balance[i]=balance[i]-output;
+					}
+				}System.out.println("결과:출금이 성공되었습니다.");
+				break;
+				
+			case 5:
+				run=false;
+				System.out.println("프로그램 종료되었습니다.");
+				
+			}//switch
+		}// while
+	}//main
+}//class

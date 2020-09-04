@@ -1,0 +1,85 @@
+package ex01;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) throws Exception{
+		//자바BIN을 만들자. >> 데이터를 저장하는 공간 >> StudentVO클래스 새로 생성
+		Scanner s=new Scanner(System.in);
+		StudentDAO dao=new StudentDAO();
+		boolean run=true;
+		while(run){
+		
+			System.out.println("====================================");
+			System.out.println("1.입력|2.조회|3.목록|4.수정|5.삭제|6.종료");
+			System.out.println("====================================");
+			System.out.print("메뉴선택>");
+			int menu=s.nextInt();
+			
+			switch(menu) {
+			
+			case 1:
+				System.out.println("============");
+				System.out.println("학생입력");
+				System.out.println("============");
+				
+				StudentVO vo=new StudentVO(); //객체생성
+				
+				System.out.print("학번(두자리입력>)");
+				String sno=s.next();
+				
+				vo=dao.read(sno);
+				
+				if(vo.getSno()==null) {
+					vo.setSno(sno);
+					System.out.print("성명>");
+					vo.setSname(s.next());
+					System.out.print("전화번호>");
+					vo.setTel(s.next());
+					
+				}else {
+					System.out.println("이미 번호가 존재합니다.");}
+				
+				break;
+				
+			case 2:
+				System.out.println("=============");
+				System.out.println("학생조회");
+				System.out.println("=============");
+				System.out.println("조회할학번>");
+				sno=s.next();
+				vo=dao.read(sno);
+				if(vo.getSname()==null) {
+					System.out.println("성명:"+ vo.getSname());
+					System.out.println("전화번호:"+vo.getTel());	
+				}else {
+					System.out.println("성명:"+vo.getSname());
+					System.out.println("전화번호:"+vo.getTel());
+				}
+				System.out.println();
+				
+				break;
+			
+			case 3:
+				break;
+			
+			case 4:
+				break;
+			
+			case 5:
+				System.out.println("삭제할번호>");
+				
+				break;
+			
+			case 6:
+				run=false;
+				System.out.println("프로그램종료");
+				break;
+				
+				}
+			
+		}
+		
+	}
+}

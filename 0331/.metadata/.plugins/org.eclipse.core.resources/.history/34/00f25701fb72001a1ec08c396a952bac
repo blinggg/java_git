@@ -1,0 +1,36 @@
+package ex02;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(a1.triangle(5, 5));
+	}
+	
+	public static void Cal() {
+		Scanner s= new Scanner(System.in);
+		System.out.print("x=");
+		int x=s.nextInt();
+		
+		System.out.print("y=");
+		int y=s.nextInt();
+		
+		
+		Calculater c1=new Calculater(x,y);		//a.b°Å¾ß.
+		
+		System.out.println("x:"+c1.x);
+		System.out.println("y:"+c1.y);
+		System.out.println("x+y:"+c1.plus(c1.x, c1.y));
+		
+		double result=c1.divide(c1.x, c1.y);
+		System.out.println("x/y:"+result);
+		System.out.print("x*y:"+result);
+		System.out.print("x-y:"+result);
+		
+		
+		
+		}//
+	}//m
+

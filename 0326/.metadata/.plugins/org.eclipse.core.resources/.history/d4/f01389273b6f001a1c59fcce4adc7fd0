@@ -1,0 +1,29 @@
+package practice1;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//1.변수선언하기
+		int[] num= {20,30,40,50};
+		int max=0;
+		int min=10000;
+		int sum=0;
+		
+		//2. 합계구하기, 최대값 , 최소값 구하기
+		for(int i=0; i<=num.length-1; i++) {
+			sum=sum+num[i];
+		if(max<num[i]) {max=num[i];}
+		if(min>num[i]) {min=num[i];}
+		
+		}//for
+		
+		//3. 평균값과 최대값 출력하기
+		double avg=sum/num.length;
+		
+		System.out.println("합계는"+sum+"입니다.");
+		System.out.println("최대값은"+max+"입니다.");
+		System.out.println("최소값은"+min+"입니다.");
+		System.out.println("평균은"+avg+"입니다.");
+
+	}//main
+}//class

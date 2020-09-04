@@ -1,0 +1,71 @@
+package ex03;
+
+import java.util.ArrayList;
+
+public class Sample {
+
+	public static void main(String[] args) {
+//학생이 여러명일 때		
+		Report[] report=new Report[5];
+		int count=0;
+		
+		report[0]=new Report();
+		report[0].setSno("01");
+		report[0].setSname("홍길동");
+		report[0].setKor(90);
+		report[0].setEng(96);
+		report[0].setMat(85);
+		
+		count++;
+//===================================================	
+		report[1]=new Report();
+		report[1].setSno("02");
+		report[1].setSname("이몽룡");
+		report[1].setKor(85);
+		report[1].setEng(70);
+		report[1].setMat(60);
+		
+		for(int i=0; i<count; i++) {
+			report[i].printList();
+		}
+		
+//========================================================
+
+	/*	Report r=new Report(); 
+			r.setSno("01");
+			r.setSname("홍길동");
+			r.setKor(90);
+			r.setEng(100);
+			r.setMat(85);
+			r.printList();
+			r.printReport();*/
+			
+//ArrayList 사용(컬렉션) >> 추가할 때마다 메모리 사용함.
+	//ArrayList<Report> array=new ArrayList<Report>();
+	
+/*	Report r=new Report();
+		r.setSno("01");
+		r.setSname("홍길동");
+		r.setKor(90);
+		r.setEng(85);
+		r.setMat(95);
+		array.add(r);		
+		
+		r=new Report();
+		r.setSno("02");
+		r.setSname("이몽룡");
+		r.setKor(85);
+		r.setEng(50);
+		r.setMat(60);
+		array.add(r);	
+		
+		for(int i=0; i<array.size(); i++) {
+			r=array.get(i);
+			r.printList();
+		}*/
+		
+	}
+
+	}
+
+

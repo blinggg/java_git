@@ -1,0 +1,12 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//자바BIN을 만들자. >> 데이터를 저장하는 공간 >> StudentVO클래스 새로 생성
+		
+
+		
+		
+	}
+}

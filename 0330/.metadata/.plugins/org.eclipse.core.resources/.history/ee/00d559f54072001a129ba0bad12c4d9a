@@ -1,0 +1,31 @@
+package ex02;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//예제
+		Scanner s=new Scanner(System.in);
+		
+		int a=1;
+		int b=2;
+		int c=3;
+		int d=4;
+		int e=5;
+		
+		System.out.print("숫자를 입력하세요.");
+		int menu=s.nextInt();
+		
+		if(a==1)
+		System.out.println("*");
+		if(a==2)
+			System.out.println("**");
+		if(a==3)
+			System.out.println("***");
+		if(a==4)
+			System.out.println("****");
+		if(a==5)
+			System.out.println("*****");
+	}//main
+}//class

@@ -1,0 +1,17 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// 
+		int score = 88;
+		
+		if (score >= 90){
+			System.out.println("점수가 90보다 큽니다.");
+		}
+		if(score<90){
+			System.out.println(score+"은(는) 점수가 90보다 작습니다.");
+		}
+	}
+
+}

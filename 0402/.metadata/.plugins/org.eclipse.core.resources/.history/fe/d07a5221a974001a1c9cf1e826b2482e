@@ -1,0 +1,43 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		
+		boolean run=true;
+		while(run) {
+			
+			System.out.println("----------------------------------");
+			System.out.println("1.성적입력|2.성적조회|3.성적수정|4.종료");
+			System.out.println("----------------------------------");
+			System.out.print("메뉴선택>");
+			int menu=s.nextInt();
+			
+		switch(menu) {
+		case 1:
+			System.out.println("---------------------------");
+			System.out.println("성적입력");
+			System.out.println("---------------------------");
+			SungjukVo vo=new SungjukVo();
+			System.out.println("번호>");
+			vo.setSno(s.next());
+			
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			run=false;
+			System.out.println("프로그램 종료.");
+			break;
+			
+			
+			}
+
+		}
+	}
+}

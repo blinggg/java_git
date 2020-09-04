@@ -1,0 +1,44 @@
+package ex01;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//자바BIN을 만들자. >> 데이터를 저장하는 공간 >> StudentVO클래스 새로 생성
+		Scanner s=new Scanner(System.in);
+		boolean run=true;
+		
+		System.out.println("====================================");
+		System.out.println("1.입력|2.조회|3.목록|4.수정|5.삭제|6.종료");
+		System.out.println("====================================");
+		System.out.print("메뉴선택>");
+		int menu=s.nextInt();
+		
+		switch(menu) {
+		
+		case 1:
+			System.out.println("============");
+			System.out.println("학생입력");
+			System.out.println("============");
+			break;
+		case 2:
+			break;
+		
+		case 3:
+			break;
+		
+		case 4:
+			break;
+		
+		case 5:
+			break;
+		
+		case 6:
+			break;
+		
+		
+		}
+		
+	}
+}

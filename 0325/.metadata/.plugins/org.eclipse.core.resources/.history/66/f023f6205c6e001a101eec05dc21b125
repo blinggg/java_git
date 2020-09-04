@@ -1,0 +1,19 @@
+package ex04;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//배열(참조타입)
+		
+		int[] d= {80,90,100,150,200};
+		int sum=0;
+		
+		for(int i=0; i<=d.length-1; i++) {
+			System.out.println(i+"번째"+d[i]);
+			sum=sum+d[i];
+		}
+		System.out.println("합계:"+sum);
+		
+		System.out.println("평균:"+sum/d.length);
+	}
+}

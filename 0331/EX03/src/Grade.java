@@ -1,0 +1,38 @@
+//성적관리용 클래스
+public class Grade {
+//필드선언하기-------------------------------------------------
+	String sno;
+	String sname;
+	int kor;
+	int eng;
+	int mat;
+	int tot;
+	double avg;
+	char grade;
+	
+	
+	
+//기본생성자만들기----------------------------------------------
+	public Grade(){
+		
+	}
+	
+//생성자만들기-------------------------------------------------
+	public Grade(String sno, String sname, int kor, int eng, int mat) {
+	
+		this.sno = sno;
+		this.sname = sname;
+		this.kor = kor;
+		this.eng = eng;
+		this.mat = mat;
+	}
+	
+//메소드(실행)--------------------------------------------------
+	void printGrade() {
+		this.avg=(this.kor+this.eng+this.mat)/3.; //평균값 구하기
+		System.out.println(this.sno+"\t"+this.sname+"\t"+
+				this.kor+"\t"+this.eng+"\t"+this.mat+"\t"+this.avg);
+	}
+	
+}
+

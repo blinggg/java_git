@@ -1,0 +1,16 @@
+package ex06;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		for1();
+	}
+//5까지 반복출력하기=============================
+	public static void for1(){
+		System.out.println("***예제1***");
+			for(int i=1; i<=10; i+=2){ // i=i+2
+				System.out.println(i);
+			}
+	}
+	
+}

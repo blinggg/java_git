@@ -1,0 +1,14 @@
+package ex06;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// 
+		System.out.println("*******매출보고서*******");
+		System.out.println("-----------------------");
+		System.out.println("상품명\t수량\t단가\t금액\t비고");
+		System.out.println("-----------------------");
+		
+	}
+
+}

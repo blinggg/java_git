@@ -1,0 +1,25 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// switch문 연습하기
+		Scanner s=new Scanner(System.in);
+		int num=s.nextInt();
+		
+		switch(num) {
+		case 1 :
+			System.out.println("1번이나왔습니다");
+		case 2:
+			System.out.println("2번이나왔습니다.");
+		case 3:
+			System.out.println("3번이 나왔습니다");
+		case 4:
+			System.out.println("4번이 나왔습니다");
+		default :
+			System.out.println("다른 값을 입력하세요.");
+					}
+	}//main
+}// sample

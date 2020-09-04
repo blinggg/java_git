@@ -1,0 +1,21 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//배열에 있는 데이터들에 대한 평균값과 최대값 구하기
+		int[] num= {23,60,97,65,45,32,78,54,200};
+		int sum=0;
+		int max=0;
+			for(int i=0; i<=8; i++) {
+				sum=sum+num[i]; 
+				if(num[i]>max) {max=num[i];}
+									}//for
+			
+			double avg=(double)sum/num.length;
+			
+			System.out.println("평균값은"+avg+"입니다.");
+			System.out.println("최대값은"+max+"입니다.");
+		
+	}//main
+}//class

@@ -1,0 +1,29 @@
+package ex02;
+
+//넓이
+public class Area {
+	//삼각형넓이:(밑변*넓이*높이)*2/1
+	
+	static double triangle(int x, int y) {
+		System.out.print("삼각형의넓이");
+		return x*y/2.;
+				
+	}//A
+	
+	//직사각형 넓이:가로*세로
+	 static int rectangle(int x, int y) {
+		 System.out.print("직사각형의넓이");
+		 return x*y;
+	 }
+	 
+	//정사각형 넓이:가로*세로
+	static int rectangle(int x) {
+		System.out.print("정사각형의넓이");
+			 return x*x;
+	}
+	
+	static double circle(int r ) {
+		System.out.print("원의넓이");
+			return r*r*3.14;
+	}
+}

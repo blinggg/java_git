@@ -1,0 +1,69 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);	
+		boolean run=true;
+		
+		String[] no=new String[100];
+		String[] name=new String[100];
+		String[] address=new String[100];
+		int count = 0; 						//주소입력갯수
+		
+		while(run) {
+			System.out.println("--------------------------------");
+			System.out.println("1.주소입력|2.주소목록|3.주소조회|4.종료");
+			System.out.println("---------------------------------");
+			
+			System.out.print("선택>");
+			int menu=s.nextInt();
+			
+			switch(menu) {
+			
+			case 1://주소입력
+				count=count++;
+				System.out.println("------------------------------");
+				System.out.println("주소입력");
+				System.out.println("------------------------------");
+				
+				//1번입력시 나오는 상황
+				System.out.print("번호>");
+				no[count]=s.next();
+				System.out.print("성명>");
+				name[count]=s.next();
+				System.out.print("주소>");
+				
+				s.nextLine();
+				address[count]=s.nextLine(); //공란입력을 도우기 위해서
+				
+				System.out.println("결과:학생이 입력되었습니다.");
+				break;
+				
+			case 2://주소목록
+				count=count++;
+				System.out.println("------------------------------");
+				System.out.println("주소목록");
+				System.out.println("------------------------------");
+				System.out.println(no[count]+"\t"+name[count]+"\t"+address[count]);
+				
+				break;
+				
+			case 3://주소조회
+				break;
+				
+			case 4://종료
+				run=false;
+				System.out.println("프로그램 종료");
+				
+				
+			}
+			
+		
+		
+		
+		}//while
+	}//main
+}//class

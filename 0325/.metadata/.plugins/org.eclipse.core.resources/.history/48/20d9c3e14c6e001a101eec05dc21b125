@@ -1,0 +1,26 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		
+		//반복명령
+		boolean run=true;
+		while(run) {
+				
+		System.out.println("[실행결과]");
+		
+		Scanner s=new Scanner(System.in);
+		System.out.println("-----------------");
+		System.out.println("1.증속 | 2.감속 | 3. 중지");
+		System.out.println("-----------------");
+		System.out.print("선택:");
+		int menu=s.nextInt();
+		
+		}
+		
+	}//MAIN
+}//SAMPLE
+

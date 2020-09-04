@@ -1,0 +1,10 @@
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Grade g1=new Grade("01","ȫ�浿",90,80,90);
+		g1.tot=g1.total(g1.kor,g1.eng,g1.mat);
+		g1.printGrade(g1);
+	}
+
+}

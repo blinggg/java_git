@@ -1,0 +1,13 @@
+package ex02;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// 
+		Calculater c1=new Calculater();
+		c1.r=5;
+		double area=c1.areaCircle();
+		System.out.println("¿øÀÇ³ÐÀÌ:"+area);
+	}
+
+}

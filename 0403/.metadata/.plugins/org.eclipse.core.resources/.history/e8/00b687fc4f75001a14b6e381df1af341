@@ -1,0 +1,61 @@
+package ex01;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args){
+		//자바BIN을 만들자. >> 데이터를 저장하는 공간 >> StudentVO클래스 새로 생성
+		Scanner s=new Scanner(System.in);
+		StudentDAO dao=new StudentDAO();
+		
+		System.out.println("====================================");
+		System.out.println("1.입력|2.조회|3.목록|4.수정|5.삭제|6.종료");
+		System.out.println("====================================");
+		System.out.print("메뉴선택>");
+		int menu=s.nextInt();
+		
+		switch(menu) {
+		
+		case 1:
+			System.out.println("============");
+			System.out.println("학생입력");
+			System.out.println("============");
+			
+			StudentVO vo=new StudentVO(); //객체생성
+			
+			System.out.print("학번(두자리입력>)");
+			vo.setSno(s.next());
+			System.out.print("성명>");
+			vo.setSname(s.next());
+			System.out.print("전화번호>");
+			vo.setTel(s.next());
+			
+			try {
+				dao.insert(vo);
+				System.out.println("입력이 완료되었습니다.");
+			}catch(Exception e) {
+				System.out.println(e.toString());
+			}
+			break;
+			
+		case 2:
+			break;
+		
+		case 3:
+			break;
+		
+		case 4:
+			break;
+		
+		case 5:
+			break;
+		
+		case 6:
+			break;
+		
+		
+		}
+		
+	}
+}

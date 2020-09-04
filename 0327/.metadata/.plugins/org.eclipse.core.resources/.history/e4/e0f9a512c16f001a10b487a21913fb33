@@ -1,0 +1,38 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// 변수지정하기
+		int a=6;
+		int b=10;
+		
+		
+		
+		
+		
+		//연산자.
+		//1.산술연산자(+,-,*,/,%)
+		
+		//2.비교연산자(<,>,<=,>=,==,!==)>> 데이터저장장소 비교는 == / 값 비교는 equal
+		
+		//3.논리연산자(!, && , |)
+			boolean isrun;
+			
+			isrun=(a>=5) || (b<10);
+			if(isrun) {
+				System.out.println("참");
+			}else {
+				System.out.println("거짓");
+			}
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}//main
+}//class

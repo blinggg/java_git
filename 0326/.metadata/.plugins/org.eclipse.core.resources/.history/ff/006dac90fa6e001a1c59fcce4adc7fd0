@@ -1,0 +1,17 @@
+package ex02;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		
+		//1.타이틀 정하기
+		System.out.println("-----------------------------------------");
+		System.out.println("1.학생수|2.점수입력|3.점수리스트|4.분석|5.종료");
+		System.out.println("-----------------------------------------");
+		
+		//2.
+		
+		
+
+	}//main
+}//class

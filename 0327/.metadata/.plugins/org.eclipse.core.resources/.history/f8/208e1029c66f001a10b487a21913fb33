@@ -1,0 +1,63 @@
+package ex01;
+
+public class Sample {
+		
+	public static void main(String[] args) {
+		//1교시-> 기초연습
+		// 변수지정하기
+		int a=6;
+		int b=10;
+		
+		String name1="정은경";
+		String name2="정은경";
+		String name3=new String("정은경");
+		
+		
+		//연산자.
+		//1.산술연산자(+,-,*,/,%)
+		
+		//2.비교연산자(<,>,<=,>=,==,!==)>> 데이터저장장소 비교는 == / 값 비교는 equal
+		
+		//3.논리연산자(!, && , |)
+			boolean isrun;
+			
+			isrun=(a>=5) && (b<10);
+			if(isrun) {
+				System.out.println("참");
+			}else {
+				System.out.println("거짓");
+			}
+		
+		if(name1.equals(name3)) {
+			System.out.println("같습니다");
+		}else {
+			System.out.println("같지않습니다.");
+		}
+		
+		if(a==b) {
+			System.out.println("같니?");
+		}else {
+			System.out.println("다르니?");
+		}
+		
+		//2교시 조건문
+		int score=95;
+		
+		//점수가 90점이상이면 A출력
+		//점수가 80점이상이면 B출력
+		//점수가 70점이상이면 C출력
+		//점수가 70점미만이면 F출력
+		//if~else if~else문 사용
+		
+		if(score>=90) {
+			System.out.println("A입니다.");
+		}else if(score>=80) {
+			System.out.println("B입니다");
+		}else if(score>=70) {
+			System.out.println("C입니다.");
+		}else {System.out.println("F입니다.");
+		
+		}
+		
+	}//main
+}//class

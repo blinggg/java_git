@@ -1,0 +1,19 @@
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//.Student 클래스 실행하기
+		Student();
+	}
+
+		//3.Student 메소드 생성하기
+	public static void Student() {
+		
+		Student s1=new Student(); //객체생성하기
+		s1.sno="01";
+		s1.sname="정은경";
+		s1.phon="010-4750-4985";
+		s1.print(s1);
+		
+	}
+}

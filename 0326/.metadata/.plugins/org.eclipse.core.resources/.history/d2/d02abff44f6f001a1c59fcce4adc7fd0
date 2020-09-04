@@ -1,0 +1,66 @@
+package practice2;
+
+import java.util.Scanner;
+
+public class practice2 {
+
+	public static void main(String[] args) {
+		// 예제3. 주소관리 창 만들기
+		Scanner s=new Scanner(System.in);
+		
+		boolean run=true;
+		
+		//변수정하기
+		int[] num=new int[100];
+		String[] name=null;
+		String[] address=null;
+		
+		int count=0;
+		
+		while(run) {
+			System.out.println("----------------------------------");
+			System.out.println("1.주소입력|2.주소목록|3.주소조회|4.종료");
+			System.out.println("----------------------------------");
+			
+			System.out.println("선택>");
+			int menu=s.nextInt();
+		
+			switch(menu) {
+			
+			case 1 ://주소입력
+				System.out.println("----------------------------------");
+				System.out.println("주소입력");
+				System.out.println("----------------------------------");
+				
+				System.out.print("번호>");
+				num[count]=s.nextInt();
+				System.out.print("성명>");
+				name[count]=s.next();
+				System.out.println("주소>");
+				address[count]=s.nextLine();
+				System.out.println("결과:학생이 입력되었습니다.");
+				
+				count=count++;
+				
+				break;
+				
+			case 2 ://주소목록
+				for(int i=0; i<=num.length-1; i++) {
+					System.out.println(num[i]+"\t"+name[i]+"\t"+address[i]);
+				}//for
+				break;
+				
+			case 3 :
+				
+				break;
+				
+			case 4 :
+				run=false;
+				System.out.println("프로그램 종료합니다.");
+				break;
+				
+			
+			}//switch
+		}//while
+	}//main
+}//class

@@ -1,0 +1,34 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		
+		//반복명령
+		boolean run=true;
+		while(run) {
+		
+		System.out.println("[실행결과]");
+		
+		Scanner s=new Scanner(System.in);
+		System.out.println("-----------------");
+		System.out.println("1.증속 | 2.감속 | 3. 중지");
+		System.out.println("-----------------");
+		int cho=s.nextInt(); //선택 
+		int sum=0;
+		int tot=sum+cho;
+		
+		System.out.print("선택:"+cho);
+		System.out.println("현재속도="+tot);
+		
+		if(cho==3) {
+			System.out.println("프로그램종료");
+				run=false;
+					}
+		}
+		
+	}//MAIN
+}//SAMPLE
+
